@@ -13,7 +13,6 @@
         <el-menu-item index="3-2"><a href="https://www.sbcr.jp/" target="help">Publisher</a>
         </el-menu-item>
       </el-submenu>
-        
     </el-menu>
     <router-view/>
   </div>
