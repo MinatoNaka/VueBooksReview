@@ -9,19 +9,18 @@
       </el-form-item>
     </el-form>
     <hr />
-    <ul>
-        <li v-for="book in books" :key="book.id">
-            {{ book.title }}
-        </li>
-    </ul>
+    <BookInfo v-for="(b, i) of books"
+      :linkable="true" :book="b" :index="i + 1" :key="b.isbn"></BookInfo>   
   </div>
 </template>
 
 <script>
+import BookInfo from '@/components/BookInfo.vue'
 
 export default {
   name: 'book-search',
   components: {
+    BookInfo
   },
   data() {
     return {
