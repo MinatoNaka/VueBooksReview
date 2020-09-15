@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+import { UPDATE_CURRENT } from '@/store/mutation-types'
 
 export default {
   name: 'book-info',
@@ -23,8 +25,12 @@ export default {
     book: { type: Object }
   },
   methods: {
+    ...mapActions([UPDATE_CURRENT]),
     onclick() {
-        console.log(111);
+      if (this.linkable) {
+        this[UPDATE_CURRENT](this.book) 
+        this.$router.push('/form')
+      }
     }
   }
 }

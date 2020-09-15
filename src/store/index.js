@@ -1,15 +1,28 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
+import { UPDATE_CURRENT } from "./mutation-types";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    current: null
   },
   mutations: {
+    [UPDATE_CURRENT](state, payload) {
+      state.current = payload;
+    },
   },
   actions: {
+    [UPDATE_CURRENT]({ commit }, payload) {
+      commit(UPDATE_CURRENT, payload)
+    },
   },
-  modules: {
-  }
-})
+  plugins: [
+    createPersistedState({
+      key: "reading-recorder",
+      storage: localStorage,
+    }),
+  ],
+});
