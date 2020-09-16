@@ -1,24 +1,15 @@
-# books-review
+Vue.jsの練習。
 
-## Project setup
-```
-npm install
-```
+Google Books APIを利用して本情報を取得し、
+そのレビューコメントを登録することができるアプリ。  
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+vue-cliを利用して構築。
+vue-routerを使ったSPA。
+vuexを使ってローカルストレージにデータ保存している。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+「これからはじめるVue.js実践入門」
+にあるサンプルアプリ構築を実践。
+https://www.amazon.co.jp/dp/B07WVXRNH3/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+GitHub Pagesを使ってアプリ公開している。
+https://minatonaka.github.io/VueBooksReview/
